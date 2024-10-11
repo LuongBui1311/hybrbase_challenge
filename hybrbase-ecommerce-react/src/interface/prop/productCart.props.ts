@@ -1,9 +1,6 @@
 import { CardProps } from "antd";
+import { IProduct } from "../type/product.type";
 
 export interface ProductCartProps extends CardProps {
-  key: number,
-  name: string;
-  slug: string;
-  image: string;
-  price: number;
+  data: IProduct;
 }

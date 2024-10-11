@@ -31,7 +31,7 @@ const Footer = () => {
           <Input
             type="text"
             placeholder="Email Address"
-            className="hover:border-inherit active:border-inherit active:shadow-none text-base"
+            className="hover:border-inherit active:border-inherit active:shadow-none text-base w-8/12"
             suffix={
               <Button type="text" className="hover:bg-transparent font-bold text-base h-10">
                 Sign up

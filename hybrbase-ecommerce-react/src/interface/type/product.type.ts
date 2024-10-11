@@ -3,11 +3,13 @@ import { IImage } from "./image.type";
 
 export interface IProduct {
     id: number,
-    name: string,
+    documentId: string
+    name: string | undefined,
     slug: string,
     price: number,
     descriptions: string,
     image: IImage,
     variants: string[],
     categories: ICategory,
+    stocks: number
 }

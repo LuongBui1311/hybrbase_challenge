@@ -1,4 +1,4 @@
-import { Button, Flex, Row } from "antd";
+import { Button, Col, Flex, Row } from "antd";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Filter from "../../components/Filter";
@@ -7,6 +7,7 @@ import ProductCard from "./components/ProductCard";
 import { useProductList } from "./useProductList";
 import { useEffect, useState } from "react";
 import { IProduct } from "../../interface/type/product.type";
+import { Link } from "react-router-dom";
 
 const ProductListPage = () => {
   const { getProducts } = useProductList;
@@ -33,7 +34,7 @@ const ProductListPage = () => {
           className="my-28 mx-auto p-5 w-10/12"
         >
           <Filter />
-          <div className="flex-grow flex flex-col gap-6 justify-center align-middle">
+          <div className="w-10/12 flex flex-col gap-6 justify-center align-middle">
             <div className="clear-both flex flex-row-reverse">
               <SortMenu />
             </div>
@@ -41,15 +42,15 @@ const ProductListPage = () => {
               Display {total} {total > 1 ? 'products' : 'product'}
             </p>
             <Row className="clear-both" gutter={16}>
-              {products?.map((products: IProduct) => (
-                <ProductCard
-                  key={products.id}
-                  name={products.name}
-                  slug={products.slug}
-                  price={products.price}
-                  image={products.image.url}
-                />
-              ))}
+            {products?.map((data: IProduct) => (
+            <Col lg={8} key={data.id}>
+              <Link
+                to={`/productdetail/${data.documentId}`}
+              >
+                <ProductCard data={data} />
+              </Link>
+            </Col>
+          ))}
             </Row>
             <Button className="w-5/12 mx-auto text-base h-10">Load more products</Button>
           </div>

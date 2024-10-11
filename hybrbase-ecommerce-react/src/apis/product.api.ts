@@ -8,8 +8,8 @@ const getProductList = () => {
   return axiosClient.get(listProductUrl);
 };
 
-const getProductBySlug = (slug: string | undefined) => {
-  const singleProductUrl = getUrl(`products?${slug}&populate=*`);
+const getProductBySlug = (docId: string | undefined) => {
+  const singleProductUrl = getUrl(`products/${docId}?populate=*`);
   return axiosClient.get(singleProductUrl);
 };
 

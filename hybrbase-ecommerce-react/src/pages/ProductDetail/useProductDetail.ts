@@ -1,9 +1,9 @@
 import { productAPIs } from "../../apis/product.api";
 import { handleError } from "../../utils/handleError";
 
-const getSingleProduct = async (slug: string | undefined) => {
+const getSingleProduct = async (docId: string | undefined) => {
   try {
-    const res = await productAPIs.getProductBySlug(slug);
+    const res = await productAPIs.getProductBySlug(docId);
     console.log(res.data.data);
     return res.data.data;
   } catch (error) {
