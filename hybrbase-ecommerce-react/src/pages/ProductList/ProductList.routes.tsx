@@ -3,7 +3,7 @@ import { RouteObject } from 'react-router-dom';
 const ProductListPage = lazy(() => import('.'));
 
 export const ProductListRoute: RouteObject = {
-  path: 'products',
+  path: '/',
   element: (
     <Suspense fallback={<div>Loading</div>}>
       <ProductListPage />

@@ -34,11 +34,11 @@
       "target": "api::category.category",
       "mappedBy": "category"
     },
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::product.product",
-      "inversedBy": "categories"
+      "mappedBy": "category"
     }
   }
 }

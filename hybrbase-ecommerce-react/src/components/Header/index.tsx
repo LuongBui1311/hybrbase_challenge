@@ -5,7 +5,7 @@ import CategoryMenu from "../Menu/CategoryMenu";
 
 const Header = () => {
   return (
-    <div className="nav-bar fixed z-10 mx-auto mt-0 w-full bg-black p-5 shadow-sm">
+    <div className="nav-bar fixed z-10 mx-auto mt-0 w-full bg-blue-600 p-5 shadow-sm">
       <Flex align="center" justify="space-between" className="mx-auto w-10/12">
         <Flex
           gap={"large"}
@@ -14,11 +14,11 @@ const Header = () => {
           className="flex flex-grow"
         >
           <Flex className="font-sans">
-            <Link to="/" className="font-sans font-bold text-base text-white">
+            <Link to="/" className="font-sans font-bold text-xl text-white">
               Ecommerce
             </Link>
           </Flex>
-          <Flex className="navbar" gap={"middle"}>
+          <Flex className="navbar text-base" gap={"middle"}>
             <CategoryMenu />
             <Link to="/" className="text-white">
               Stories
